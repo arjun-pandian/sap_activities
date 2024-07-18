@@ -1,0 +1,88 @@
+{
+    "systems": {
+        "PL5": {
+            "username": "",
+            "password": "",
+            "client": "012",
+            "notes": "crbxcl71 00"
+        },
+        "PKX": {
+            "username": "",
+            "password": "",
+            "client": "100",
+            "notes": "sappkxpas.pharma.aventis.com 00"
+        },
+        "PM6": {
+            "username": "",
+            "password": "",
+            "client": "600",
+            "notes": "gtyxsappm6p.pharma.aventis.com 00"
+        },
+        "PR3": {
+            "username": "",
+            "password": "",
+            "client": "900",
+            "notes": "frsappr3.pasteur.aventis.com 00"
+        },
+        "PKS": {
+            "username": "",
+            "password": "",
+            "client": "100",
+            "notes": "/H/saprtawsapac.pharma.aventis.com/H/sappkspas.pharma.aventis.com 00"
+        },
+        "CP5": {
+            "username": "",
+            "password": "",
+            "client": "700",
+            "notes": "sapcp5amer 31"
+        },
+        "PR5": {
+            "username": "",
+            "password": "",
+            "client": "700",
+            "notes": "sappr5amer 00"
+        },
+        "PK9": {
+            "username": "",
+            "password": "",
+            "client": "215",
+            "notes": "sapmspk9.sanofi.com 00"
+        },
+        "PMP": {
+            "username": "",
+            "password": "",
+            "client": "810",
+            "notes": "sappmpamer 00"
+        },
+        "CD5": {
+            "username": "",
+            "password": "",
+            "client": "700",
+            "notes": "sapcd5amer 11"
+        },
+        "CV5": {
+            "username": "",
+            "password": "",
+            "client": "700",
+            "notes": "sapcv5amer 25"
+        },
+        "DE5": {
+            "username": "",
+            "password": "",
+            "client": "200",
+            "notes": "sapde5amer 04"
+        },
+        "VA5": {
+            "username": "",
+            "password": "",
+            "client": "700",
+            "notes": "sapva5amer 00"
+        },
+        "IP3": {
+            "username": "PIMONITOR",
+            "password": "",
+            "client": "031",
+            "notes": "frsapIP3.pasteur.aventis.com 64"
+        }
+    }
+}
