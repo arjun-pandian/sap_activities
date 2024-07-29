@@ -91,6 +91,10 @@ def take_and_save_screenshot(system_name, image_name):
     screenshot = pyautogui.screenshot()
 
     folder_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run','Manual_Monitoring','Screenshots'))
+    system_folder_path = os.path.join(folder_path, system_name)
 
-    screenshot_file = f"{folder_path}/{system_name}/{image_name}.png"
+    if not os.path.exists(system_folder_path):
+        os.makedirs(system_folder_path)
+
+    screenshot_file = f"{system_folder_path}/{image_name}.png"
     screenshot.save(screenshot_file)

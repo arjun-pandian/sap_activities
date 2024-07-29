@@ -3,8 +3,12 @@ from docx.shared import Inches
 from docx.oxml.ns import nsdecls
 from docx.oxml import parse_xml
 from datetime import date
+import sys
+import os
+current_directory = os.getcwd()
 
-base_path = "C:/Users/U1038047/OneDrive - Sanofi/Documents/SAP_Activities/Scripts_run/Manual_Monitoring/Screenshots/"
+
+base_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Screenshots'))
 
 
 pk9_screenshot_names = [
@@ -99,8 +103,11 @@ all_screenshot_paths = [
 
 def generate_document():
     today = date.today().strftime("%d.%m.%Y")
-    template_path = "C:/Users/U1038047/OneDrive - Sanofi/Documents/SAP_Activities/Files/Manual_Monitoring/S2_Manual_Monitoring_template.docx"
-    output_path = f"C:/Users/U1038047/OneDrive - Sanofi/Documents/SAP_Activities/Scripts_run/Manual_Monitoring/Document/S2_Manual_Monitoring_{today}.docx"
+    template_path = os.path.abspath(os.path.join(current_directory, 'Files', 'Manual_Monitoring','S2_Manual_Monitoring_template.docx'))
+    output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Documents',f'S2_Manual_Monitoring_{today}.docx'))
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+
     doc = Document(template_path)
 
     for i, screenshot_file in enumerate(all_screenshot_paths):

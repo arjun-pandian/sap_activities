@@ -146,8 +146,11 @@ all_screenshot_paths = [
 
 today = date.today().strftime("%d.%m.%Y")
 template_path = os.path.abspath(os.path.join(current_directory, 'Files','Vertex','Vertex_Monitoring_Template.docx'))
-output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Document',f'Vertex_Monitoring_{today}.docx'))
+output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Documents',f'Vertex_Monitoring_{today}.docx'))
 doc = Document(template_path)
+
+if not os.path.exists(output_path):
+    os.makedirs(output_path)
 
 for i, screenshot_file in enumerate(all_screenshot_paths):
     placeholder = f"#IMAGE{i+1}#"
