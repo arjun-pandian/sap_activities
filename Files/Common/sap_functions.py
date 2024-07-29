@@ -10,7 +10,7 @@ import re
 import json
 import pygetwindow as gw
 import os
-#cwd
+
 current_directory = os.getcwd()
 
 today = None
