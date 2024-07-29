@@ -131,7 +131,6 @@ take_and_save_screenshot("vertex", "cp5_700")
 session.findById("wnd[0]/tbar[0]/okcd").text = "/nex"
 session.findById("wnd[0]").sendVKey (0)
 
-
 #base_path = "C:/Users/U1038047/OneDrive - Sanofi/Documents/SAP_Activities/Scripts_run/Manual_Monitoring/Screenshots/"
 base_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Screenshots'))
 
@@ -146,11 +145,12 @@ all_screenshot_paths = [
 
 today = date.today().strftime("%d.%m.%Y")
 template_path = os.path.abspath(os.path.join(current_directory, 'Files','Vertex','Vertex_Monitoring_Template.docx'))
+documents_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Documents'))
+if not os.path.exists(documents_path):
+    os.makedirs(documents_path)
+
 output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Documents',f'Vertex_Monitoring_{today}.docx'))
 doc = Document(template_path)
-
-if not os.path.exists(output_path):
-    os.makedirs(output_path)
 
 for i, screenshot_file in enumerate(all_screenshot_paths):
     placeholder = f"#IMAGE{i+1}#"

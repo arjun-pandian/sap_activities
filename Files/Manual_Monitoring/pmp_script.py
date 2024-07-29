@@ -336,7 +336,7 @@ def run_pmp_script():
     
 
     from openpyxl import load_workbook
-    Excel_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run','Manual_Monitoring','Document','Manual_Monitoring_Report.xlsx'))
+    Excel_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run','Manual_Monitoring','Reports','Manual_Monitoring_Report.xlsx'))
     wb = load_workbook(Excel_path)
     ws = wb.active
     values = [int(sm12_previous_locks), int(sm12_today_locks), int(sm12_total_locks), int(st22_today_runtime_errors), int(sm37_total_job_time), sm51_status, int(db02_percentage), int(tablespace_greater_than_90)]

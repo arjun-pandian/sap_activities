@@ -41,7 +41,7 @@ def main():
 
         selected_scripts = []
         while True:
-            script_choices = input("Enter the script numbers to run (on seperate lines), or 'all' to run all, or leave blank to finish: ").strip().lower()
+            script_choices = input("Enter the script numbers to run (seperated by space), or 'all' to run all, or leave blank to finish: ").strip().lower()
             
             if script_choices == "":
                 break

@@ -82,31 +82,34 @@ pr5_screenshot_names = [
 ]
 
 all_screenshot_paths = [
-    f"{base_path}pr3/{screenshot}" for screenshot in pr3_screenshot_names
+    f"{base_path}/pr3/{screenshot}" for screenshot in pr3_screenshot_names
 ] + [
-    f"{base_path}pk9/{screenshot}" for screenshot in pk9_screenshot_names
+    f"{base_path}/pk9/{screenshot}" for screenshot in pk9_screenshot_names
 ] + [
-    f"{base_path}pmp/{screenshot}" for screenshot in pmp_screenshot_names
+    f"{base_path}/pmp/{screenshot}" for screenshot in pmp_screenshot_names
 ] + [
-    f"{base_path}pkx/{screenshot}" for screenshot in pkx_screenshot_names
+    f"{base_path}/pkx/{screenshot}" for screenshot in pkx_screenshot_names
 ] + [
-    f"{base_path}pl5/{screenshot}" for screenshot in pl5_screenshot_names
+    f"{base_path}/pl5/{screenshot}" for screenshot in pl5_screenshot_names
 ] + [
-    f"{base_path}cp5/{screenshot}" for screenshot in cp5_screenshot_names
+    f"{base_path}/cp5/{screenshot}" for screenshot in cp5_screenshot_names
 ] + [
-    f"{base_path}pm6/{screenshot}" for screenshot in pm6_screenshot_names
+    f"{base_path}/pm6/{screenshot}" for screenshot in pm6_screenshot_names
 ] + [
-    f"{base_path}pks/{screenshot}" for screenshot in pks_screenshot_names
+    f"{base_path}/pks/{screenshot}" for screenshot in pks_screenshot_names
 ] + [
-    f"{base_path}pr5/{screenshot}" for screenshot in pr5_screenshot_names
+    f"{base_path}/pr5/{screenshot}" for screenshot in pr5_screenshot_names
 ]
 
 def generate_document():
     today = date.today().strftime("%d.%m.%Y")
     template_path = os.path.abspath(os.path.join(current_directory, 'Files', 'Manual_Monitoring','S2_Manual_Monitoring_template.docx'))
-    output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Documents',f'S2_Manual_Monitoring_{today}.docx'))
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
+    documents_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Documents'))
+    if not os.path.exists(documents_path):
+        os.makedirs(documents_path)
+
+    output_path = os.path.abspath(os.path.join(documents_path, f'S2_Manual_Monitoring_{today}.docx'))
+    
 
     doc = Document(template_path)
 
