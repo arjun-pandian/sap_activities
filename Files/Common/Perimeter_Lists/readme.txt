@@ -1,0 +1,1 @@
+Paste your SAP Global Perimeter list and MII Landscape details here.
