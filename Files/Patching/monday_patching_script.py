@@ -26,9 +26,7 @@ def search_name_in_workbook(workbook_path, name):
             return found_name, workbook_path, sheet_name
     return None, None, None
 
-#file1_path = 'C:/Users/U1038047/OneDrive - Sanofi/Documents/Activities/Documents/SAP Global Perimeter V18.3 1 (1).xlsx'
 file1_path = os.path.abspath(os.path.join(parameter_lists_directory, 'SAP Global Perimeter V18.4.xlsx'))
-#file2_path = 'C:/Users/U1038047/OneDrive - Sanofi/Documents/Activities/Documents/MII Landscape details - Global_2024_06_10.xlsx'
 file2_path = os.path.abspath(os.path.join(parameter_lists_directory, 'MII Landscape details - Global_2024_06_10.xlsx'))
 
 server_names_path = os.path.abspath(os.path.join(patching_directory, 'Input','server_names.txt'))

@@ -1,1 +1,1 @@
-Paste your SAP Global Perimeter list and MII Landscape details here.
+Paste SAP Global Perimeter list and MII Landscape details here.
