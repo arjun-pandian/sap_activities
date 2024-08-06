@@ -119,7 +119,7 @@ for row in ws.iter_rows(min_row=1, max_row=1, min_col=1, max_col=ws.max_column):
         cell.border = border
 for row_idx, data in enumerate(extracted_data, start=2):
     cell = ws.cell(row=row_idx, column=5)
-    cell.value = f'=VLOOKUP(A{row_idx},[AO_Name.xlsx]Sheet1!A:B, 2, FALSE)'
+    cell.value = f'=VLOOKUP(A{row_idx},[AO_Names.xlsx]Sheet1!A:B, 2, FALSE)'
     cell.border = border
 
 for row in ws.iter_rows(min_row=2, max_row=ws.max_row, min_col=1, max_col=ws.max_column):
