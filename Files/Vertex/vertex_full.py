@@ -131,7 +131,6 @@ take_and_save_screenshot("vertex", "cp5_700")
 session.findById("wnd[0]/tbar[0]/okcd").text = "/nex"
 session.findById("wnd[0]").sendVKey (0)
 
-#base_path = "C:/Users/U1038047/OneDrive - Sanofi/Documents/SAP_Activities/Scripts_run/Manual_Monitoring/Screenshots/"
 base_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Manual_Monitoring','Screenshots'))
 
 vertex_screenshot_names = [

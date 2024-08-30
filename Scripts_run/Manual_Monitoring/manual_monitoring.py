@@ -24,7 +24,7 @@ def run_scripts(script_list):
 
 def main():
     start_time = time.time()
-    option = int(input("Enter your choice (1 for monitoring, 2 for vertex): ").strip())
+    option = int(input("Enter your choice (1 for monitoring, 2 for vertex, 3 for GSA): ").strip())
 
     if option == 1 :
         print("Available scripts:")
@@ -79,6 +79,13 @@ def main():
         vertex_script_path = os.path.abspath(os.path.join(current_directory, 'Files', 'Vertex','vertex_full.py'))
         subprocess.run(["python", vertex_script_path], check=True)
         print("Vertex script executed successfully.")
+
+    elif option == 3:
+        print("Running GSA Monitoring script...")
+
+        gsa_script_path = os.path.abspath(os.path.join(current_directory, 'Files', 'GSA','gsa_monitoring.py'))
+        subprocess.run(["python", gsa_script_path], check=True)
+        print("GSA script executed successfully.")
 
     else:
         print("Invalid option. Please choose either 'monitoring' or 'vertex'.")
