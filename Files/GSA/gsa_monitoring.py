@@ -78,12 +78,18 @@ take_and_save_screenshot("GSA", "p08_9_st22")
 session.findById("wnd[0]/usr/txtS_UNAME-LOW").text = "*"
 session.findById("wnd[0]/usr/txtS_UNAME-LOW").setFocus()
 session.findById("wnd[0]/usr/txtS_UNAME-LOW").caretPosition = 1
-session.findById("wnd[0]/usr/btnTODAY").press()
-take_and_save_screenshot("GSA", "p08_10_st22")
+try:
+    session.findById("wnd[0]/usr/btnTODAY").press()
+    take_and_save_screenshot("GSA", "p08_10_st22")
+except:
+    take_and_save_screenshot("GSA", "p08_10_st22")
 
 session.findById("wnd[0]/tbar[0]/btn[3]").press()
-session.findById("wnd[0]/usr/btnYESTERD").press()
-take_and_save_screenshot("GSA", "p08_11_st22")
+try:
+    session.findById("wnd[0]/usr/btnYESTERD").press()
+    take_and_save_screenshot("GSA", "p08_11_st22")
+except:
+    take_and_save_screenshot("GSA", "p08_11_st22")
 
 session.findById("wnd[0]/tbar[0]/okcd").text = "/nsm21"
 session.findById("wnd[0]").sendVKey (0)
