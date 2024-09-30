@@ -12,7 +12,6 @@ current_directory = os.getcwd()
 parameter_lists_directory = os.path.abspath(os.path.join(current_directory, 'Files', 'Common','Perimeter_Lists'))
 patching_directory = os.path.abspath(os.path.join(current_directory, 'Scripts_run', 'Monday_Patching'))
 
-
 file1_path = os.path.abspath(os.path.join(parameter_lists_directory, 'SAP Global Perimeter V18.4.xlsx'))
 file2_path = os.path.abspath(os.path.join(parameter_lists_directory, 'MII Landscape details - Global_2024_06_10.xlsx'))
 
@@ -147,7 +146,12 @@ with tqdm(total=len(result), desc="Searching Servers", unit="change", colour='bl
             else:
                 closed.append(change)
 
-output_file_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run','Thursday_Patching','Output','output.txt'))
+
+output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run','Thursday_Patching','Output'))
+if not os.path.exists(output_path):
+        os.makedirs(output_path)
+
+output_file_path = os.path.abspath(os.path.join(output_path,'output.txt'))
 
 with open(output_file_path, 'w') as file:
     file.write("Close\n-----\n")
@@ -234,7 +238,7 @@ with tqdm(total=len(need_to_patch), desc="Generating Excel", unit="change", colo
                     })
         pbar.update(1)
 
-output_path = os.path.abspath(os.path.join(current_directory, 'Scripts_run','Thursday_Patching','Output','need_to_patch.xlsx'))
+output_path = os.path.abspath(os.path.join(output_path,'need_to_patch.xlsx'))
 
 with pd.ExcelWriter(output_path, engine='openpyxl') as writer:
     df = pd.DataFrame(data)
